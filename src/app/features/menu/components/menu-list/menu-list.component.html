@@ -1,6 +1,5 @@
-<p>menu-list works!</p>
 <div>
-    <div class="d-flex flex-wrap">
-        <app-menu-item></app-menu-item>
+    <div class="d-flex flex-wrap gap-15">
+        <app-menu-item *ngFor="let menuItem of menuList" [menuItem]="menuItem"></app-menu-item>
     </div>
 </div>

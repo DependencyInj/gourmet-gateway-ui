@@ -5,6 +5,7 @@ import { MenuListComponent } from './components/menu-list/menu-list.component';
 import { MenuRouterModule } from './menu-routing.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MenuItemComponent } from './components/menu-item/menu-item.component';
 
 
 
@@ -12,7 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     MenuHomeComponent,
-    MenuListComponent
+    MenuListComponent,
+    MenuItemComponent
   ],
   imports: [
     CommonModule,

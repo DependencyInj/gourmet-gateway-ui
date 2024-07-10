@@ -6,6 +6,7 @@ import { MenuRouterModule } from './menu-routing.module';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -20,7 +21,8 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
     CommonModule,
     MenuRouterModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
   ]
 })
 export class MenuModule { }

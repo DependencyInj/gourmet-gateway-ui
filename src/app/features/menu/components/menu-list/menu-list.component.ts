@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuItem } from '../../models/menu-item.model';
+import { MenuService } from '../../services/menu.service';
 
 @Component({
   selector: 'app-menu-list',
@@ -9,13 +10,18 @@ import { MenuItem } from '../../models/menu-item.model';
 export class MenuListComponent {
   menuList: MenuItem[] = [];
 
+  constructor(private menuService: MenuService){
+
+  }
   ngOnInit(){
-    let menuItem = new MenuItem();
-    menuItem.name = "Biriyani";
-    menuItem.description = "Biriyani from the heart of kerala, calidut. The authentic taste of calicut biriyani, is something that you shouldn't miss out";
-    menuItem.price = 180;
-    menuItem.type = "Mughal";
-    
-    this.menuList = [menuItem, menuItem, menuItem];
+    this.getMenuList();
+  }
+
+  getMenuList(){
+    this.menuService.getMenus().subscribe({
+      next: (resp) => {
+        this.menuList = resp;
+      }
+    });
   }
 }

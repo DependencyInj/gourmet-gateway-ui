@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { MatIconModule } from '@angular/material/icon';
+import { AddMenuItemComponent } from './components/add-menu-item/add-menu-item.component';
 
 
 
@@ -15,7 +16,8 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [
     MenuHomeComponent,
     MenuListComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    AddMenuItemComponent
   ],
   imports: [
     CommonModule,

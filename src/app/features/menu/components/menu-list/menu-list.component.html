@@ -1,4 +1,7 @@
 <div>
+    <button (click)="openDialog()" mat-fab aria-label="fab add" class="position-fixed bottom-0 end-0 mb-5 mr-5">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+    </button>
     <div class="d-flex flex-wrap gap-15">
         <app-menu-item *ngFor="let menuItem of menuList" [menuItem]="menuItem"></app-menu-item>
     </div>

@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { MatIconModule } from '@angular/material/icon';
 import { AddMenuItemComponent } from './components/add-menu-item/add-menu-item.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -25,6 +26,7 @@ import { AddMenuItemComponent } from './components/add-menu-item/add-menu-item.c
     MatCardModule,
     MatButtonModule,
     MatIconModule,
+    SharedModule
   ]
 })
 export class MenuModule { }

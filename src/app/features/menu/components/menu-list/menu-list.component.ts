@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MenuItem } from '../../models/menu-item.model';
 import { MenuService } from '../../services/menu.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AddMenuItemComponent } from '../add-menu-item/add-menu-item.component';
 
 @Component({
   selector: 'app-menu-list',
@@ -9,6 +11,7 @@ import { MenuService } from '../../services/menu.service';
 })
 export class MenuListComponent {
   menuList: MenuItem[] = [];
+  readonly dialog = inject(MatDialog);
 
   constructor(private menuService: MenuService){
 
@@ -22,6 +25,15 @@ export class MenuListComponent {
       next: (resp) => {
         this.menuList = resp;
       }
+    });
+  }
+
+
+  openDialog() {
+    const dialogRef = this.dialog.open(AddMenuItemComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
     });
   }
 }

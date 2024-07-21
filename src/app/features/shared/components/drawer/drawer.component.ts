@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-drawer',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./drawer.component.scss']
 })
 export class DrawerComponent {
-
+  @Input() header = "Test";
 }

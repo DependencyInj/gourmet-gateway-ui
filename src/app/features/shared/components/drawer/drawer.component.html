@@ -1,8 +1,9 @@
-<h2 mat-dialog-title>{{header}}</h2>
-<mat-dialog-content>
-    <ng-content></ng-content>
-</mat-dialog-content>
-<mat-dialog-actions>
-    <button mat-flat-button>Cancel</button>
-    <button mat-flat-button color="primary">Submit</button>
-</mat-dialog-actions>
+
+<mat-drawer-container class="example-container" >
+    <mat-drawer #drawer>I'm a drawer</mat-drawer>
+    <mat-drawer-content>
+        <ng-content></ng-content>
+      <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+    </mat-drawer-content>
+</mat-drawer-container>
+  

@@ -9,9 +9,10 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
 import { MatIconModule } from '@angular/material/icon';
 import { AddMenuItemComponent } from './components/add-menu-item/add-menu-item.component';
 import { SharedModule } from '../shared/shared.module';
-
-
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,10 @@ import { SharedModule } from '../shared/shared.module';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatDialogModule,
     SharedModule
   ]
 })

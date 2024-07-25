@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-menu-item.component.scss']
 })
 export class AddMenuItemComponent {
-
+  value = '';
 }

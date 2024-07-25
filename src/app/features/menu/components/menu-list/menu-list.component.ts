@@ -3,7 +3,6 @@ import { MenuItem } from '../../models/menu-item.model';
 import { MenuService } from '../../services/menu.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AddMenuItemComponent } from '../add-menu-item/add-menu-item.component';
-import { DialogPosition } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-menu-list',
@@ -31,12 +30,11 @@ export class MenuListComponent {
 
 
   openDialog() {
-    // const dialogRef = this.dialog.open(AddMenuItemComponent, {
-    //   position: 
-    // });
+    const dialogRef = this.dialog.open(AddMenuItemComponent, {
+    });
 
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log(`Dialog result: ${result}`);
-    // });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }

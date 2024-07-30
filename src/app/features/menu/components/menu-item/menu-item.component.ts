@@ -7,5 +7,5 @@ import { MenuItem } from '../../models/menu-item.model';
   styleUrls: ['./menu-item.component.scss']
 })
 export class MenuItemComponent {
-  @Input() menuItem: MenuItem = new MenuItem();
+  @Input() menuItem!: MenuItem;
 }

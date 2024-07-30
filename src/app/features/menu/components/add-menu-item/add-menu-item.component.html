@@ -1,39 +1,39 @@
 <app-drawer>
     <h3 mat-dialog-title>Add Menu Item</h3>
     <mat-dialog-content class="mt-3">
-        <form>
+        <form [formGroup]="menuItemForm" >
             <div class="row ">
                 <mat-form-field class="form-field">
                     <mat-label>Name</mat-label>
-                    <input matInput type="text" [(ngModel)]="value">
+                    <input formControlName="name" matInput type="text">
                     <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                         <mat-icon>close</mat-icon>
                     </button>
                 </mat-form-field>
                 <mat-form-field class="example-form-field">
                     <mat-label>Description</mat-label>
-                    <textarea matInput type="text" [(ngModel)]="value"></textarea>
+                    <textarea matInput type="text" formControlName="desciption"></textarea>
                     <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                         <mat-icon>close</mat-icon>
                     </button>
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Item Type</mat-label>
-                    <mat-select>
+                    <mat-select formControlName="type">
                         <mat-option *ngFor="let menutype of menuTypes"
                             [value]="menutype.code">{{menutype.name}}</mat-option>
                     </mat-select>
                 </mat-form-field>
                 <mat-form-field class="form-field">
                     <mat-label>Price</mat-label>
-                    <input matInput type="text" [(ngModel)]="value">
+                    <input matInput type="text" formControlName="price">
                     <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                         <mat-icon>close</mat-icon>
                     </button>
                 </mat-form-field>
                 <mat-form-field class="form-field">
                     <mat-label>Image URL</mat-label>
-                    <input matInput type="text" [(ngModel)]="value">
+                    <input matInput type="text" formControlName="url">
                     <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
                         <mat-icon>close</mat-icon>
                     </button>
@@ -43,7 +43,7 @@
         <div class="position-fixed bottom-0 end-0 mb-3 mr-3">
             <div class="d-flex gap-15">
                 <button mat-flat-button class="rounded-3" (click)="cancel()">Cancel</button>
-                <button mat-flat-button color="accent" class="rounded-3">Confirm</button>
+                <button mat-flat-button color="accent" class="rounded-3" (click)="submit()">Confirm</button>
             </div>
         </div>
     </mat-dialog-content>

@@ -44,4 +44,8 @@ export class AddMenuItemComponent {
   cancel() {
     this.dialogRef.close();
   }
+
+  submit(){
+    console.log(this.menuItemForm.getRawValue());
+  }
 }

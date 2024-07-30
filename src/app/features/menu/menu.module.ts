@@ -11,7 +11,7 @@ import { AddMenuItemComponent } from './components/add-menu-item/add-menu-item.c
 import { SharedModule } from '../shared/shared.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
@@ -35,6 +35,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatDialogModule,
     MatOptionModule,
     MatSelectModule,
+    ReactiveFormsModule,
     SharedModule
   ]
 })

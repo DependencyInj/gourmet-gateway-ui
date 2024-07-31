@@ -23,7 +23,7 @@ export class MenuService {
         return this.http.get<MenuType[]>(url);
     }
 
-    addMenuItem(payload: MenuType): Observable<string> {
+    addMenuItem(payload: MenuItem): Observable<string> {
         const url = `${this.baseUrl}/add`;
         return this.http.post<string>(url, payload);
     }

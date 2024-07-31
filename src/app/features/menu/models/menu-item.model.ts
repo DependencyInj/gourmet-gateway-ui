@@ -5,7 +5,7 @@ export class MenuItem {
     type!: string;
     image!: string;
 
-    constructor(data: MenuItem){
+    constructor(data: any){
         this.name = data.name;
         this.description = data.description;
         this.price = data.price;

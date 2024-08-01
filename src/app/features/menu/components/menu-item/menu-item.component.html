@@ -14,7 +14,7 @@
         <mat-card-subtitle>{{menuItem.type}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content class="mt-10">
-        <p>{{menuItem.description}}</p>
+        <p>{{menuItem.description | ellipsis: 25}}</p>
     </mat-card-content>
     <mat-card-actions>
         <div class="ml-7">

@@ -47,11 +47,11 @@ export class AddMenuItemComponent {
   }
 
   submit(){
-    console.log(this.menuItemForm.getRawValue());
     let payload = new MenuItem(this.menuItemForm.getRawValue());
     this.menuService.addMenuItem(payload).subscribe({
       next: (resp) => {
         console.log(resp);
+        this.dialogRef.close();
       }
     })
   }

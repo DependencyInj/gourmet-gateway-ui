@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { DrawerComponent } from './components/drawer/drawer.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { EllipsisPipe } from './pipes/ellipsis.pipe';
 
 @NgModule({
   declarations: [
-    DrawerComponent
+    DrawerComponent,
+    EllipsisPipe
   ],
   imports: [
     CommonModule,
@@ -14,7 +16,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule
   ],
   exports: [
-    DrawerComponent
+    DrawerComponent,
+    EllipsisPipe
   ]
 })
 export class SharedModule { }

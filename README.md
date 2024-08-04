@@ -15,3 +15,5 @@ Reviews
  2. Edit review
  3. Delete review
  
+Loader
+Toasters

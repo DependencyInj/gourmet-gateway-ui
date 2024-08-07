@@ -13,6 +13,10 @@ const routes: Routes = [
         loadChildren: () => import('./features/menu/menu.module').then(m => m.MenuModule)
       }
     ]
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)
   }
 ];
 

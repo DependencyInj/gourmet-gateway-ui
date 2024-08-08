@@ -15,7 +15,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'login',
+    path: 'gourmet',
     loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)
   }
 ];

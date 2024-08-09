@@ -1,4 +1,4 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { MenuItem } from "../models/menu-item.model";
@@ -14,8 +14,9 @@ export class MenuService {
     constructor(private http: HttpClient) { }
 
     getMenus(): Observable<MenuItem[]> {
-        const url = `${this.baseUrl}/menus`
-        return this.http.get<MenuItem[]>(url);
+        let header = new HttpHeaders().set("Authorization", `Bearer ${localStorage.getItem('access_token')}`);
+        const url = `${this.baseUrl}/menus`;
+        return this.http.get<MenuItem[]>(url, { headers: header});
     }
 
     getMenuTypes(): Observable<MenuType[]>{

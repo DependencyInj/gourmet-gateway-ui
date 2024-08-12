@@ -7,6 +7,11 @@
     background-size: cover;
 }
 
-::ng-deep .mat-mdc-card-header-text{
+::ng-deep .mat-mdc-card-header-text {
     width: 100%;
+}
+
+.delete-icon {
+    right: -15px;
+    top: -15px;
 }

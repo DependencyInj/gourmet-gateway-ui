@@ -8,4 +8,8 @@ import { MenuItem } from '../../models/menu-item.model';
 })
 export class MenuItemComponent {
   @Input() menuItem!: MenuItem;
+
+  deleteMenuItem(){
+
+  }
 }

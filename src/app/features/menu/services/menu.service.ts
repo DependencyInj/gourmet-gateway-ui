@@ -28,4 +28,9 @@ export class MenuService {
         const url = `${this.baseUrl}/add`;
         return this.http.post<string>(url, payload);
     }
+
+    removeItem(menuItemId: number){
+        const url = `${this.baseUrl}/delete?menuItemId=${menuItemId}`;
+        return this.http.get<boolean>(url);
+    }
 }
